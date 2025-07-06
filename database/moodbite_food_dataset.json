@@ -1,0 +1,2401 @@
+[
+  {
+    "food_id": 1,
+    "name": "Spaghetti Carbonara",
+    "description": "Creamy pasta dish with eggs, cheese, pancetta, and black pepper",
+    "cuisine": "Italian",
+    "taste_profile": [
+      "savory",
+      "creamy",
+      "rich"
+    ],
+    "moods": [
+      "happy",
+      "relaxed",
+      "nostalgic"
+    ],
+    "cravings": [
+      "savory",
+      "creamy",
+      "rich"
+    ],
+    "meal_types": [
+      "lunch",
+      "dinner"
+    ],
+    "dietary_restrictions": [],
+    "nutrition": {
+      "calories": 650,
+      "protein": 25,
+      "carbs": 70,
+      "fat": 35
+    },
+    "preparation_time": 20,
+    "popularity_score": 4.8
+  },
+  {
+    "food_id": 2,
+    "name": "Margherita Pizza",
+    "description": "Classic pizza with tomato sauce, mozzarella, and basil",
+    "cuisine": "Italian",
+    "taste_profile": [
+      "savory",
+      "tangy"
+    ],
+    "moods": [
+      "happy",
+      "relaxed",
+      "social",
+      "nostalgic"
+    ],
+    "cravings": [
+      "savory",
+      "cheesy"
+    ],
+    "meal_types": [
+      "lunch",
+      "dinner"
+    ],
+    "dietary_restrictions": [
+      "vegetarian"
+    ],
+    "nutrition": {
+      "calories": 850,
+      "protein": 35,
+      "carbs": 100,
+      "fat": 40
+    },
+    "preparation_time": 30,
+    "popularity_score": 4.7
+  },
+  {
+    "food_id": 3,
+    "name": "Tiramisu",
+    "description": "Coffee-flavored Italian dessert with layers of ladyfingers and mascarpone cream",
+    "cuisine": "Italian",
+    "taste_profile": [
+      "sweet",
+      "creamy",
+      "rich"
+    ],
+    "moods": [
+      "happy",
+      "romantic",
+      "nostalgic"
+    ],
+    "cravings": [
+      "sweet",
+      "creamy"
+    ],
+    "meal_types": [
+      "dessert"
+    ],
+    "dietary_restrictions": [
+      "vegetarian"
+    ],
+    "nutrition": {
+      "calories": 450,
+      "protein": 7,
+      "carbs": 55,
+      "fat": 25
+    },
+    "preparation_time": 40,
+    "popularity_score": 4.9
+  },
+  {
+    "food_id": 4,
+    "name": "Kung Pao Chicken",
+    "description": "Spicy stir-fried chicken with peanuts, vegetables, and chili peppers",
+    "cuisine": "Chinese",
+    "taste_profile": [
+      "spicy",
+      "savory",
+      "crunchy"
+    ],
+    "moods": [
+      "happy",
+      "adventurous",
+      "excited"
+    ],
+    "cravings": [
+      "spicy",
+      "savory",
+      "crunchy"
+    ],
+    "meal_types": [
+      "lunch",
+      "dinner"
+    ],
+    "dietary_restrictions": [],
+    "nutrition": {
+      "calories": 550,
+      "protein": 35,
+      "carbs": 40,
+      "fat": 30
+    },
+    "preparation_time": 25,
+    "popularity_score": 4.6
+  },
+  {
+    "food_id": 5,
+    "name": "Dim Sum",
+    "description": "Variety of small bite-sized portions of food served in small steamer baskets",
+    "cuisine": "Chinese",
+    "taste_profile": [
+      "savory",
+      "umami"
+    ],
+    "moods": [
+      "social",
+      "relaxed",
+      "nostalgic"
+    ],
+    "cravings": [
+      "savory",
+      "steamed",
+      "umami"
+    ],
+    "meal_types": [
+      "lunch",
+      "brunch"
+    ],
+    "dietary_restrictions": [],
+    "nutrition": {
+      "calories": 600,
+      "protein": 20,
+      "carbs": 70,
+      "fat": 25
+    },
+    "preparation_time": 60,
+    "popularity_score": 4.7
+  },
+  {
+    "food_id": 6,
+    "name": "Tacos Al Pastor",
+    "description": "Marinated spit-grilled slices of pork with pineapple, onions, and cilantro",
+    "cuisine": "Mexican",
+    "taste_profile": [
+      "savory",
+      "spicy",
+      "tangy"
+    ],
+    "moods": [
+      "happy",
+      "excited",
+      "social"
+    ],
+    "cravings": [
+      "savory",
+      "spicy",
+      "tangy"
+    ],
+    "meal_types": [
+      "lunch",
+      "dinner"
+    ],
+    "dietary_restrictions": [],
+    "nutrition": {
+      "calories": 450,
+      "protein": 30,
+      "carbs": 35,
+      "fat": 25
+    },
+    "preparation_time": 30,
+    "popularity_score": 4.8
+  },
+  {
+    "food_id": 7,
+    "name": "Guacamole",
+    "description": "Avocado-based dip with lime juice, onions, tomatoes, and cilantro",
+    "cuisine": "Mexican",
+    "taste_profile": [
+      "savory",
+      "tangy",
+      "creamy"
+    ],
+    "moods": [
+      "relaxed",
+      "social",
+      "happy"
+    ],
+    "cravings": [
+      "savory",
+      "creamy"
+    ],
+    "meal_types": [
+      "appetizer",
+      "snack"
+    ],
+    "dietary_restrictions": [
+      "vegan",
+      "vegetarian",
+      "gluten-free"
+    ],
+    "nutrition": {
+      "calories": 250,
+      "protein": 3,
+      "carbs": 15,
+      "fat": 22
+    },
+    "preparation_time": 10,
+    "popularity_score": 4.6
+  },
+  {
+    "food_id": 8,
+    "name": "Butter Chicken",
+    "description": "Chicken in a mildly spiced tomato sauce with butter and cream",
+    "cuisine": "Indian",
+    "taste_profile": [
+      "savory",
+      "rich",
+      "creamy",
+      "spicy"
+    ],
+    "moods": [
+      "comforted",
+      "satisfied",
+      "nostalgic"
+    ],
+    "cravings": [
+      "savory",
+      "rich",
+      "spicy"
+    ],
+    "meal_types": [
+      "lunch",
+      "dinner"
+    ],
+    "dietary_restrictions": [],
+    "nutrition": {
+      "calories": 600,
+      "protein": 35,
+      "carbs": 30,
+      "fat": 40
+    },
+    "preparation_time": 45,
+    "popularity_score": 4.8
+  },
+  {
+    "food_id": 9,
+    "name": "Vegetable Biryani",
+    "description": "Fragrant rice dish with vegetables, herbs, and spices",
+    "cuisine": "Indian",
+    "taste_profile": [
+      "savory",
+      "spicy",
+      "aromatic"
+    ],
+    "moods": [
+      "satisfied",
+      "happy",
+      "nostalgic"
+    ],
+    "cravings": [
+      "savory",
+      "spicy"
+    ],
+    "meal_types": [
+      "lunch",
+      "dinner"
+    ],
+    "dietary_restrictions": [
+      "vegetarian"
+    ],
+    "nutrition": {
+      "calories": 480,
+      "protein": 10,
+      "carbs": 80,
+      "fat": 15
+    },
+    "preparation_time": 50,
+    "popularity_score": 4.5
+  },
+  {
+    "food_id": 10,
+    "name": "Chocolate Chip Cookies",
+    "description": "Classic cookies with chocolate chips in a soft, chewy dough",
+    "cuisine": "American",
+    "taste_profile": [
+      "sweet",
+      "rich"
+    ],
+    "moods": [
+      "sad",
+      "nostalgic",
+      "stressed",
+      "comforted"
+    ],
+    "cravings": [
+      "sweet",
+      "rich",
+      "comforting"
+    ],
+    "meal_types": [
+      "dessert",
+      "snack"
+    ],
+    "dietary_restrictions": [
+      "vegetarian"
+    ],
+    "nutrition": {
+      "calories": 180,
+      "protein": 2,
+      "carbs": 25,
+      "fat": 9
+    },
+    "preparation_time": 25,
+    "popularity_score": 4.9
+  },
+  {
+    "food_id": 11,
+    "name": "Chicken Noodle Soup",
+    "description": "Comforting soup with chicken, vegetables, and noodles in broth",
+    "cuisine": "American",
+    "taste_profile": [
+      "savory",
+      "comforting"
+    ],
+    "moods": [
+      "sad",
+      "sick",
+      "nostalgic",
+      "comforted"
+    ],
+    "cravings": [
+      "warm",
+      "savory",
+      "light"
+    ],
+    "meal_types": [
+      "lunch",
+      "dinner"
+    ],
+    "dietary_restrictions": [],
+    "nutrition": {
+      "calories": 280,
+      "protein": 25,
+      "carbs": 30,
+      "fat": 8
+    },
+    "preparation_time": 40,
+    "popularity_score": 4.6
+  },
+  {
+    "food_id": 12,
+    "name": "Mac and Cheese",
+    "description": "Creamy pasta dish with cheese sauce",
+    "cuisine": "American",
+    "taste_profile": [
+      "savory",
+      "creamy",
+      "rich"
+    ],
+    "moods": [
+      "sad",
+      "stressed",
+      "nostalgic",
+      "comforted"
+    ],
+    "cravings": [
+      "cheesy",
+      "creamy",
+      "rich"
+    ],
+    "meal_types": [
+      "lunch",
+      "dinner",
+      "side"
+    ],
+    "dietary_restrictions": [
+      "vegetarian"
+    ],
+    "nutrition": {
+      "calories": 450,
+      "protein": 18,
+      "carbs": 55,
+      "fat": 25
+    },
+    "preparation_time": 30,
+    "popularity_score": 4.7
+  },
+  {
+    "food_id": 13,
+    "name": "Green Smoothie",
+    "description": "Nutrient-dense smoothie with leafy greens, fruits, and superfoods",
+    "cuisine": "Health Food",
+    "taste_profile": [
+      "sweet",
+      "tangy",
+      "refreshing"
+    ],
+    "moods": [
+      "energetic",
+      "health-conscious",
+      "motivated"
+    ],
+    "cravings": [
+      "fresh",
+      "light",
+      "healthy"
+    ],
+    "meal_types": [
+      "breakfast",
+      "snack"
+    ],
+    "dietary_restrictions": [
+      "vegetarian",
+      "vegan",
+      "gluten-free",
+      "dairy-free"
+    ],
+    "nutrition": {
+      "calories": 220,
+      "protein": 8,
+      "carbs": 40,
+      "fat": 5
+    },
+    "preparation_time": 5,
+    "popularity_score": 4.3
+  },
+  {
+    "food_id": 14,
+    "name": "Spicy Ramen",
+    "description": "Hot noodle soup with spicy broth, vegetables, and protein",
+    "cuisine": "Japanese",
+    "taste_profile": [
+      "spicy",
+      "savory",
+      "umami"
+    ],
+    "moods": [
+      "adventurous",
+      "cold",
+      "excited"
+    ],
+    "cravings": [
+      "spicy",
+      "warm",
+      "savory"
+    ],
+    "meal_types": [
+      "lunch",
+      "dinner"
+    ],
+    "dietary_restrictions": [],
+    "nutrition": {
+      "calories": 550,
+      "protein": 20,
+      "carbs": 75,
+      "fat": 18
+    },
+    "preparation_time": 20,
+    "popularity_score": 4.7
+  },
+  {
+    "food_id": 15,
+    "name": "Dark Chocolate",
+    "description": "Rich dark chocolate with high cacao content",
+    "cuisine": "Dessert",
+    "taste_profile": [
+      "bitter",
+      "sweet",
+      "rich"
+    ],
+    "moods": [
+      "stressed",
+      "romantic",
+      "indulgent"
+    ],
+    "cravings": [
+      "sweet",
+      "bitter",
+      "rich"
+    ],
+    "meal_types": [
+      "dessert",
+      "snack"
+    ],
+    "dietary_restrictions": [
+      "vegetarian",
+      "gluten-free"
+    ],
+    "nutrition": {
+      "calories": 180,
+      "protein": 2,
+      "carbs": 15,
+      "fat": 12
+    },
+    "preparation_time": 0,
+    "popularity_score": 4.5
+  },
+  {
+    "food_id": 16,
+    "name": "Sushi",
+    "description": "Japanese dish of vinegared rice with various toppings, usually seafood",
+    "cuisine": "Japanese",
+    "taste_profile": [
+      "savory",
+      "umami",
+      "fresh"
+    ],
+    "moods": [
+      "happy",
+      "sophisticated",
+      "social"
+    ],
+    "cravings": [
+      "savory",
+      "fresh",
+      "light"
+    ],
+    "meal_types": [
+      "lunch",
+      "dinner"
+    ],
+    "dietary_restrictions": [],
+    "nutrition": {
+      "calories": 350,
+      "protein": 20,
+      "carbs": 45,
+      "fat": 10
+    },
+    "preparation_time": 40,
+    "popularity_score": 4.8
+  },
+  {
+    "food_id": 17,
+    "name": "Matcha Ice Cream",
+    "description": "Green tea flavored ice cream with a distinctive bitter-sweet taste",
+    "cuisine": "Japanese",
+    "taste_profile": [
+      "sweet",
+      "bitter",
+      "creamy"
+    ],
+    "moods": [
+      "happy",
+      "relaxed",
+      "curious"
+    ],
+    "cravings": [
+      "sweet",
+      "creamy",
+      "refreshing"
+    ],
+    "meal_types": [
+      "dessert"
+    ],
+    "dietary_restrictions": [
+      "vegetarian"
+    ],
+    "nutrition": {
+      "calories": 240,
+      "protein": 4,
+      "carbs": 30,
+      "fat": 13
+    },
+    "preparation_time": 5,
+    "popularity_score": 4.4
+  },
+  {
+    "food_id": 18,
+    "name": "Avocado Toast",
+    "description": "Toasted bread topped with mashed avocado, salt, pepper, and various toppings",
+    "cuisine": "Contemporary",
+    "taste_profile": [
+      "savory",
+      "creamy",
+      "fresh"
+    ],
+    "moods": [
+      "energetic",
+      "health-conscious",
+      "trendy"
+    ],
+    "cravings": [
+      "savory",
+      "creamy",
+      "fresh"
+    ],
+    "meal_types": [
+      "breakfast",
+      "brunch"
+    ],
+    "dietary_restrictions": [
+      "vegetarian",
+      "vegan"
+    ],
+    "nutrition": {
+      "calories": 280,
+      "protein": 7,
+      "carbs": 30,
+      "fat": 15
+    },
+    "preparation_time": 10,
+    "popularity_score": 4.5
+  },
+  {
+    "food_id": 19,
+    "name": "French Onion Soup",
+    "description": "Rich beef broth with caramelized onions topped with bread and melted cheese",
+    "cuisine": "French",
+    "taste_profile": [
+      "savory",
+      "rich",
+      "umami"
+    ],
+    "moods": [
+      "comforted",
+      "cold",
+      "sophisticated"
+    ],
+    "cravings": [
+      "savory",
+      "warm",
+      "rich"
+    ],
+    "meal_types": [
+      "lunch",
+      "dinner",
+      "appetizer"
+    ],
+    "dietary_restrictions": [],
+    "nutrition": {
+      "calories": 320,
+      "protein": 15,
+      "carbs": 25,
+      "fat": 18
+    },
+    "preparation_time": 60,
+    "popularity_score": 4.6
+  },
+  {
+    "food_id": 20,
+    "name": "Nachos",
+    "description": "Tortilla chips loaded with cheese, jalape\u00f1os, beans, meat, and various toppings",
+    "cuisine": "Mexican",
+    "taste_profile": [
+      "savory",
+      "spicy",
+      "crunchy"
+    ],
+    "moods": [
+      "social",
+      "happy",
+      "relaxed"
+    ],
+    "cravings": [
+      "crunchy",
+      "cheesy",
+      "spicy"
+    ],
+    "meal_types": [
+      "appetizer",
+      "snack",
+      "late night"
+    ],
+    "dietary_restrictions": [],
+    "nutrition": {
+      "calories": 600,
+      "protein": 25,
+      "carbs": 50,
+      "fat": 35
+    },
+    "preparation_time": 15,
+    "popularity_score": 4.7
+  },
+  {
+    "food_id": 21,
+    "name": "Pad Thai",
+    "description": "Stir-fried rice noodles with eggs, tofu or shrimp, bean sprouts, and peanuts",
+    "cuisine": "Thai",
+    "taste_profile": [
+      "savory",
+      "sour",
+      "sweet",
+      "spicy"
+    ],
+    "moods": [
+      "adventurous",
+      "happy",
+      "excited"
+    ],
+    "cravings": [
+      "savory",
+      "tangy",
+      "spicy"
+    ],
+    "meal_types": [
+      "lunch",
+      "dinner"
+    ],
+    "dietary_restrictions": [],
+    "nutrition": {
+      "calories": 550,
+      "protein": 20,
+      "carbs": 80,
+      "fat": 18
+    },
+    "preparation_time": 25,
+    "popularity_score": 4.7
+  },
+  {
+    "food_id": 22,
+    "name": "Greek Salad",
+    "description": "Fresh salad with tomatoes, cucumbers, olives, feta cheese, and olive oil",
+    "cuisine": "Greek",
+    "taste_profile": [
+      "fresh",
+      "savory",
+      "tangy"
+    ],
+    "moods": [
+      "healthy",
+      "refreshed",
+      "energetic"
+    ],
+    "cravings": [
+      "fresh",
+      "light",
+      "tangy"
+    ],
+    "meal_types": [
+      "lunch",
+      "dinner",
+      "side"
+    ],
+    "dietary_restrictions": [
+      "vegetarian",
+      "gluten-free"
+    ],
+    "nutrition": {
+      "calories": 280,
+      "protein": 8,
+      "carbs": 15,
+      "fat": 22
+    },
+    "preparation_time": 15,
+    "popularity_score": 4.5
+  },
+  {
+    "food_id": 23,
+    "name": "Falafel",
+    "description": "Deep-fried patties made from ground chickpeas, herbs, and spices",
+    "cuisine": "Middle Eastern",
+    "taste_profile": [
+      "savory",
+      "spicy",
+      "crunchy"
+    ],
+    "moods": [
+      "satisfied",
+      "adventurous"
+    ],
+    "cravings": [
+      "savory",
+      "crunchy",
+      "spicy"
+    ],
+    "meal_types": [
+      "lunch",
+      "dinner",
+      "snack"
+    ],
+    "dietary_restrictions": [
+      "vegetarian",
+      "vegan"
+    ],
+    "nutrition": {
+      "calories": 330,
+      "protein": 12,
+      "carbs": 35,
+      "fat": 18
+    },
+    "preparation_time": 30,
+    "popularity_score": 4.4
+  },
+  {
+    "food_id": 24,
+    "name": "Ice Cream Sundae",
+    "description": "Vanilla ice cream topped with chocolate sauce, whipped cream, and a cherry",
+    "cuisine": "Dessert",
+    "taste_profile": [
+      "sweet",
+      "creamy",
+      "rich"
+    ],
+    "moods": [
+      "happy",
+      "celebratory",
+      "indulgent",
+      "nostalgic"
+    ],
+    "cravings": [
+      "sweet",
+      "creamy",
+      "cold"
+    ],
+    "meal_types": [
+      "dessert"
+    ],
+    "dietary_restrictions": [
+      "vegetarian"
+    ],
+    "nutrition": {
+      "calories": 450,
+      "protein": 7,
+      "carbs": 60,
+      "fat": 22
+    },
+    "preparation_time": 5,
+    "popularity_score": 4.7
+  },
+  {
+    "food_id": 25,
+    "name": "Chicken Wings",
+    "description": "Crispy chicken wings coated in spicy buffalo sauce",
+    "cuisine": "American",
+    "taste_profile": [
+      "spicy",
+      "savory",
+      "tangy"
+    ],
+    "moods": [
+      "excited",
+      "social",
+      "sporty"
+    ],
+    "cravings": [
+      "spicy",
+      "savory",
+      "crunchy"
+    ],
+    "meal_types": [
+      "appetizer",
+      "snack"
+    ],
+    "dietary_restrictions": [],
+    "nutrition": {
+      "calories": 320,
+      "protein": 25,
+      "carbs": 8,
+      "fat": 22
+    },
+    "preparation_time": 35,
+    "popularity_score": 4.6
+  },
+  {
+    "food_id": 26,
+    "name": "Miso Soup",
+    "description": "Traditional Japanese soup with fermented soybean paste, tofu, and seaweed",
+    "cuisine": "Japanese",
+    "taste_profile": [
+      "umami",
+      "savory",
+      "light"
+    ],
+    "moods": [
+      "calm",
+      "sick",
+      "reflective"
+    ],
+    "cravings": [
+      "warm",
+      "light",
+      "savory"
+    ],
+    "meal_types": [
+      "appetizer",
+      "side"
+    ],
+    "dietary_restrictions": [
+      "vegetarian",
+      "gluten-free"
+    ],
+    "nutrition": {
+      "calories": 80,
+      "protein": 6,
+      "carbs": 8,
+      "fat": 3
+    },
+    "preparation_time": 15,
+    "popularity_score": 4.3
+  },
+  {
+    "food_id": 27,
+    "name": "Grilled Salmon",
+    "description": "Fresh salmon fillet grilled with herbs and lemon",
+    "cuisine": "Seafood",
+    "taste_profile": [
+      "savory",
+      "fresh",
+      "rich"
+    ],
+    "moods": [
+      "health-conscious",
+      "sophisticated",
+      "satisfied"
+    ],
+    "cravings": [
+      "savory",
+      "light",
+      "protein-rich"
+    ],
+    "meal_types": [
+      "lunch",
+      "dinner"
+    ],
+    "dietary_restrictions": [
+      "gluten-free",
+      "dairy-free",
+      "paleo"
+    ],
+    "nutrition": {
+      "calories": 350,
+      "protein": 34,
+      "carbs": 0,
+      "fat": 22
+    },
+    "preparation_time": 20,
+    "popularity_score": 4.7
+  },
+  {
+    "food_id": 28,
+    "name": "Lasagna",
+    "description": "Layered pasta dish with tomato sauce, cheese, and ground meat",
+    "cuisine": "Italian",
+    "taste_profile": [
+      "savory",
+      "rich",
+      "cheesy"
+    ],
+    "moods": [
+      "comforted",
+      "nostalgic",
+      "satisfied"
+    ],
+    "cravings": [
+      "savory",
+      "rich",
+      "cheesy"
+    ],
+    "meal_types": [
+      "lunch",
+      "dinner"
+    ],
+    "dietary_restrictions": [],
+    "nutrition": {
+      "calories": 600,
+      "protein": 35,
+      "carbs": 45,
+      "fat": 30
+    },
+    "preparation_time": 90,
+    "popularity_score": 4.8
+  },
+  {
+    "food_id": 29,
+    "name": "Chamomile Tea",
+    "description": "Herbal infusion with calming properties",
+    "cuisine": "Beverages",
+    "taste_profile": [
+      "light",
+      "floral",
+      "soothing"
+    ],
+    "moods": [
+      "anxious",
+      "stressed",
+      "tired"
+    ],
+    "cravings": [
+      "warm",
+      "soothing",
+      "light"
+    ],
+    "meal_types": [
+      "beverage"
+    ],
+    "dietary_restrictions": [
+      "vegetarian",
+      "vegan",
+      "gluten-free"
+    ],
+    "nutrition": {
+      "calories": 2,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0
+    },
+    "preparation_time": 5,
+    "popularity_score": 4.2
+  },
+  {
+    "food_id": 30,
+    "name": "Chocolate Fondue",
+    "description": "Melted chocolate for dipping fruits, marshmallows, and other treats",
+    "cuisine": "Dessert",
+    "taste_profile": [
+      "sweet",
+      "rich",
+      "indulgent"
+    ],
+    "moods": [
+      "romantic",
+      "celebratory",
+      "social"
+    ],
+    "cravings": [
+      "sweet",
+      "rich",
+      "chocolate"
+    ],
+    "meal_types": [
+      "dessert",
+      "snack"
+    ],
+    "dietary_restrictions": [
+      "vegetarian"
+    ],
+    "nutrition": {
+      "calories": 400,
+      "protein": 5,
+      "carbs": 45,
+      "fat": 25
+    },
+    "preparation_time": 20,
+    "popularity_score": 4.6
+  },
+  {
+    "food_id": 31,
+    "name": "Energy Bar",
+    "description": "Nutrient-dense bar with protein, nuts, and dried fruits",
+    "cuisine": "Health Food",
+    "taste_profile": [
+      "sweet",
+      "chewy",
+      "nutty"
+    ],
+    "moods": [
+      "energetic",
+      "tired",
+      "busy"
+    ],
+    "cravings": [
+      "sweet",
+      "quick",
+      "nutritious"
+    ],
+    "meal_types": [
+      "snack",
+      "breakfast"
+    ],
+    "dietary_restrictions": [
+      "gluten-free"
+    ],
+    "nutrition": {
+      "calories": 220,
+      "protein": 12,
+      "carbs": 25,
+      "fat": 8
+    },
+    "preparation_time": 0,
+    "popularity_score": 4.0
+  },
+  {
+    "food_id": 32,
+    "name": "Pho",
+    "description": "Vietnamese noodle soup with broth, rice noodles, herbs, and meat",
+    "cuisine": "Vietnamese",
+    "taste_profile": [
+      "savory",
+      "aromatic",
+      "light"
+    ],
+    "moods": [
+      "sick",
+      "cold",
+      "comforted"
+    ],
+    "cravings": [
+      "savory",
+      "warm",
+      "aromatic"
+    ],
+    "meal_types": [
+      "lunch",
+      "dinner"
+    ],
+    "dietary_restrictions": [],
+    "nutrition": {
+      "calories": 400,
+      "protein": 25,
+      "carbs": 60,
+      "fat": 10
+    },
+    "preparation_time": 45,
+    "popularity_score": 4.7
+  },
+  {
+    "food_id": 33,
+    "name": "Bibimbap",
+    "description": "Rice bowl topped with vegetables, meat, egg, and spicy gochujang sauce",
+    "cuisine": "Korean",
+    "taste_profile": [
+      "spicy",
+      "savory",
+      "umami"
+    ],
+    "moods": [
+      "energetic",
+      "adventurous",
+      "satisfied"
+    ],
+    "cravings": [
+      "spicy",
+      "savory",
+      "nutritious"
+    ],
+    "meal_types": [
+      "lunch",
+      "dinner"
+    ],
+    "dietary_restrictions": [],
+    "nutrition": {
+      "calories": 560,
+      "protein": 25,
+      "carbs": 70,
+      "fat": 18
+    },
+    "preparation_time": 30,
+    "popularity_score": 4.6
+  },
+  {
+    "food_id": 34,
+    "name": "Kimchi",
+    "description": "Fermented vegetables with garlic, ginger, and chili",
+    "cuisine": "Korean",
+    "taste_profile": [
+      "spicy",
+      "sour",
+      "umami"
+    ],
+    "moods": [
+      "adventurous",
+      "energetic",
+      "health-conscious"
+    ],
+    "cravings": [
+      "spicy",
+      "tangy",
+      "crunchy"
+    ],
+    "meal_types": [
+      "side",
+      "appetizer"
+    ],
+    "dietary_restrictions": [
+      "vegetarian",
+      "vegan",
+      "gluten-free"
+    ],
+    "nutrition": {
+      "calories": 40,
+      "protein": 2,
+      "carbs": 8,
+      "fat": 0
+    },
+    "preparation_time": 0,
+    "popularity_score": 4.3
+  },
+  {
+    "food_id": 35,
+    "name": "Hummus",
+    "description": "Creamy dip made from chickpeas, tahini, olive oil, and lemon juice",
+    "cuisine": "Middle Eastern",
+    "taste_profile": [
+      "savory",
+      "creamy",
+      "tangy"
+    ],
+    "moods": [
+      "relaxed",
+      "social",
+      "health-conscious"
+    ],
+    "cravings": [
+      "savory",
+      "creamy",
+      "light"
+    ],
+    "meal_types": [
+      "appetizer",
+      "snack"
+    ],
+    "dietary_restrictions": [
+      "vegetarian",
+      "vegan",
+      "gluten-free"
+    ],
+    "nutrition": {
+      "calories": 180,
+      "protein": 6,
+      "carbs": 15,
+      "fat": 12
+    },
+    "preparation_time": 10,
+    "popularity_score": 4.5
+  },
+  {
+    "food_id": 36,
+    "name": "Shawarma",
+    "description": "Marinated meat cooked on a vertical rotisserie, served in flatbread with vegetables and sauce",
+    "cuisine": "Middle Eastern",
+    "taste_profile": [
+      "savory",
+      "spicy",
+      "rich"
+    ],
+    "moods": [
+      "satisfied",
+      "hungry",
+      "social"
+    ],
+    "cravings": [
+      "savory",
+      "spicy",
+      "hearty"
+    ],
+    "meal_types": [
+      "lunch",
+      "dinner",
+      "late night"
+    ],
+    "dietary_restrictions": [],
+    "nutrition": {
+      "calories": 650,
+      "protein": 35,
+      "carbs": 55,
+      "fat": 32
+    },
+    "preparation_time": 20,
+    "popularity_score": 4.7
+  },
+  {
+    "food_id": 37,
+    "name": "Lavender Tea",
+    "description": "Calming herbal tea made from dried lavender flowers",
+    "cuisine": "Beverages",
+    "taste_profile": [
+      "floral",
+      "light",
+      "soothing"
+    ],
+    "moods": [
+      "anxious",
+      "stressed",
+      "tired"
+    ],
+    "cravings": [
+      "soothing",
+      "warm",
+      "light"
+    ],
+    "meal_types": [
+      "beverage"
+    ],
+    "dietary_restrictions": [
+      "vegetarian",
+      "vegan",
+      "gluten-free"
+    ],
+    "nutrition": {
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0
+    },
+    "preparation_time": 5,
+    "popularity_score": 4.1
+  },
+  {
+    "food_id": 38,
+    "name": "Dark Chocolate Covered Almonds",
+    "description": "Almonds coated in antioxidant-rich dark chocolate",
+    "cuisine": "Snacks",
+    "taste_profile": [
+      "bitter",
+      "sweet",
+      "crunchy"
+    ],
+    "moods": [
+      "stressed",
+      "anxious",
+      "tired"
+    ],
+    "cravings": [
+      "sweet",
+      "crunchy",
+      "chocolate"
+    ],
+    "meal_types": [
+      "snack"
+    ],
+    "dietary_restrictions": [
+      "vegetarian",
+      "gluten-free"
+    ],
+    "nutrition": {
+      "calories": 170,
+      "protein": 4,
+      "carbs": 15,
+      "fat": 12
+    },
+    "preparation_time": 0,
+    "popularity_score": 4.4
+  },
+  {
+    "food_id": 39,
+    "name": "Oysters",
+    "description": "Fresh shellfish often served raw with lemon or mignonette sauce",
+    "cuisine": "Seafood",
+    "taste_profile": [
+      "briny",
+      "fresh",
+      "umami"
+    ],
+    "moods": [
+      "romantic",
+      "sophisticated",
+      "adventurous"
+    ],
+    "cravings": [
+      "fresh",
+      "savory",
+      "luxurious"
+    ],
+    "meal_types": [
+      "appetizer",
+      "dinner"
+    ],
+    "dietary_restrictions": [],
+    "nutrition": {
+      "calories": 170,
+      "protein": 20,
+      "carbs": 10,
+      "fat": 5
+    },
+    "preparation_time": 15,
+    "popularity_score": 4.2
+  },
+  {
+    "food_id": 40,
+    "name": "Strawberries and Champagne",
+    "description": "Fresh strawberries paired with sparkling champagne",
+    "cuisine": "Dessert",
+    "taste_profile": [
+      "sweet",
+      "fruity",
+      "bubbly"
+    ],
+    "moods": [
+      "romantic",
+      "celebratory",
+      "happy"
+    ],
+    "cravings": [
+      "sweet",
+      "fruity",
+      "sparkling"
+    ],
+    "meal_types": [
+      "dessert",
+      "appetizer"
+    ],
+    "dietary_restrictions": [
+      "vegetarian",
+      "gluten-free"
+    ],
+    "nutrition": {
+      "calories": 180,
+      "protein": 1,
+      "carbs": 20,
+      "fat": 0
+    },
+    "preparation_time": 5,
+    "popularity_score": 4.7
+  },
+  {
+    "food_id": 41,
+    "name": "Mediterranean Mezze Platter",
+    "description": "Assorted small dishes including hummus, olives, feta, and pita bread",
+    "cuisine": "Mediterranean",
+    "taste_profile": [
+      "savory",
+      "tangy",
+      "fresh"
+    ],
+    "moods": [
+      "social",
+      "relaxed",
+      "sophisticated"
+    ],
+    "cravings": [
+      "savory",
+      "variety",
+      "fresh"
+    ],
+    "meal_types": [
+      "appetizer",
+      "lunch"
+    ],
+    "dietary_restrictions": [
+      "vegetarian"
+    ],
+    "nutrition": {
+      "calories": 450,
+      "protein": 15,
+      "carbs": 40,
+      "fat": 25
+    },
+    "preparation_time": 25,
+    "popularity_score": 4.6
+  },
+  {
+    "food_id": 42,
+    "name": "Paella",
+    "description": "Spanish rice dish with saffron, seafood, and/or meat",
+    "cuisine": "Spanish",
+    "taste_profile": [
+      "savory",
+      "aromatic",
+      "rich"
+    ],
+    "moods": [
+      "celebratory",
+      "social",
+      "adventurous"
+    ],
+    "cravings": [
+      "savory",
+      "flavorful",
+      "hearty"
+    ],
+    "meal_types": [
+      "lunch",
+      "dinner"
+    ],
+    "dietary_restrictions": [],
+    "nutrition": {
+      "calories": 550,
+      "protein": 30,
+      "carbs": 65,
+      "fat": 18
+    },
+    "preparation_time": 60,
+    "popularity_score": 4.7
+  },
+  {
+    "food_id": 43,
+    "name": "Pancakes with Maple Syrup",
+    "description": "Fluffy pancakes topped with butter and sweet maple syrup",
+    "cuisine": "American",
+    "taste_profile": [
+      "sweet",
+      "fluffy",
+      "rich"
+    ],
+    "moods": [
+      "comforted",
+      "nostalgic",
+      "happy"
+    ],
+    "cravings": [
+      "sweet",
+      "warm",
+      "indulgent"
+    ],
+    "meal_types": [
+      "breakfast",
+      "brunch"
+    ],
+    "dietary_restrictions": [
+      "vegetarian"
+    ],
+    "nutrition": {
+      "calories": 520,
+      "protein": 8,
+      "carbs": 90,
+      "fat": 15
+    },
+    "preparation_time": 20,
+    "popularity_score": 4.8
+  },
+  {
+    "food_id": 44,
+    "name": "Eggs Benedict",
+    "description": "Poached eggs, Canadian bacon, and hollandaise sauce on English muffins",
+    "cuisine": "American",
+    "taste_profile": [
+      "savory",
+      "rich",
+      "creamy"
+    ],
+    "moods": [
+      "indulgent",
+      "sophisticated",
+      "satisfied"
+    ],
+    "cravings": [
+      "savory",
+      "rich",
+      "hearty"
+    ],
+    "meal_types": [
+      "breakfast",
+      "brunch"
+    ],
+    "dietary_restrictions": [],
+    "nutrition": {
+      "calories": 650,
+      "protein": 30,
+      "carbs": 35,
+      "fat": 42
+    },
+    "preparation_time": 30,
+    "popularity_score": 4.6
+  },
+  {
+    "food_id": 45,
+    "name": "Apple Pie",
+    "description": "Traditional pie with spiced apple filling and flaky crust",
+    "cuisine": "American",
+    "taste_profile": [
+      "sweet",
+      "spiced",
+      "comforting"
+    ],
+    "moods": [
+      "nostalgic",
+      "comforted",
+      "happy"
+    ],
+    "cravings": [
+      "sweet",
+      "comforting",
+      "warm"
+    ],
+    "meal_types": [
+      "dessert"
+    ],
+    "dietary_restrictions": [
+      "vegetarian"
+    ],
+    "nutrition": {
+      "calories": 400,
+      "protein": 4,
+      "carbs": 60,
+      "fat": 18
+    },
+    "preparation_time": 90,
+    "popularity_score": 4.8
+  },
+  {
+    "food_id": 46,
+    "name": "Mochi Ice Cream",
+    "description": "Japanese rice cake filled with ice cream",
+    "cuisine": "Japanese",
+    "taste_profile": [
+      "sweet",
+      "chewy",
+      "cold"
+    ],
+    "moods": [
+      "curious",
+      "happy",
+      "adventurous"
+    ],
+    "cravings": [
+      "sweet",
+      "chewy",
+      "cold"
+    ],
+    "meal_types": [
+      "dessert"
+    ],
+    "dietary_restrictions": [
+      "vegetarian"
+    ],
+    "nutrition": {
+      "calories": 110,
+      "protein": 1,
+      "carbs": 20,
+      "fat": 3
+    },
+    "preparation_time": 0,
+    "popularity_score": 4.4
+  },
+  {
+    "food_id": 47,
+    "name": "Buddha Bowl",
+    "description": "Nutrient-rich bowl with grains, vegetables, proteins, and dressing",
+    "cuisine": "Health Food",
+    "taste_profile": [
+      "fresh",
+      "savory",
+      "varied"
+    ],
+    "moods": [
+      "energetic",
+      "health-conscious",
+      "satisfied"
+    ],
+    "cravings": [
+      "fresh",
+      "nutritious",
+      "colorful"
+    ],
+    "meal_types": [
+      "lunch",
+      "dinner"
+    ],
+    "dietary_restrictions": [
+      "vegetarian",
+      "vegan",
+      "gluten-free"
+    ],
+    "nutrition": {
+      "calories": 450,
+      "protein": 15,
+      "carbs": 65,
+      "fat": 15
+    },
+    "preparation_time": 25,
+    "popularity_score": 4.5
+  },
+  {
+    "food_id": 48,
+    "name": "Mushroom Risotto",
+    "description": "Creamy Italian rice dish with mushrooms and parmesan",
+    "cuisine": "Italian",
+    "taste_profile": [
+      "savory",
+      "creamy",
+      "umami"
+    ],
+    "moods": [
+      "comforted",
+      "sophisticated",
+      "satisfied"
+    ],
+    "cravings": [
+      "creamy",
+      "savory",
+      "rich"
+    ],
+    "meal_types": [
+      "lunch",
+      "dinner"
+    ],
+    "dietary_restrictions": [
+      "vegetarian"
+    ],
+    "nutrition": {
+      "calories": 480,
+      "protein": 10,
+      "carbs": 70,
+      "fat": 16
+    },
+    "preparation_time": 40,
+    "popularity_score": 4.6
+  },
+  {
+    "food_id": 49,
+    "name": "Ginger Tea with Honey",
+    "description": "Soothing tea with fresh ginger and honey",
+    "cuisine": "Beverages",
+    "taste_profile": [
+      "spicy",
+      "sweet",
+      "warming"
+    ],
+    "moods": [
+      "sick",
+      "cold",
+      "tired"
+    ],
+    "cravings": [
+      "warm",
+      "soothing",
+      "healing"
+    ],
+    "meal_types": [
+      "beverage"
+    ],
+    "dietary_restrictions": [
+      "vegetarian",
+      "gluten-free"
+    ],
+    "nutrition": {
+      "calories": 60,
+      "protein": 0,
+      "carbs": 16,
+      "fat": 0
+    },
+    "preparation_time": 10,
+    "popularity_score": 4.5
+  },
+  {
+    "food_id": 50,
+    "name": "Congee",
+    "description": "Asian rice porridge often served with toppings like ginger, green onion, and protein",
+    "cuisine": "Chinese",
+    "taste_profile": [
+      "mild",
+      "comforting",
+      "savory"
+    ],
+    "moods": [
+      "sick",
+      "comforted",
+      "cold"
+    ],
+    "cravings": [
+      "warm",
+      "mild",
+      "soothing"
+    ],
+    "meal_types": [
+      "breakfast",
+      "lunch",
+      "dinner"
+    ],
+    "dietary_restrictions": [
+      "gluten-free"
+    ],
+    "nutrition": {
+      "calories": 220,
+      "protein": 8,
+      "carbs": 40,
+      "fat": 3
+    },
+    "preparation_time": 45,
+    "popularity_score": 4.3
+  },
+  {
+    "food_id": 51,
+    "name": "Grilled Cheese Sandwich",
+    "description": "Golden brown toasted sandwich with melted cheese",
+    "cuisine": "American",
+    "taste_profile": [
+      "savory",
+      "cheesy",
+      "crunchy"
+    ],
+    "moods": [
+      "comforted",
+      "nostalgic",
+      "satisfied"
+    ],
+    "cravings": [
+      "cheesy",
+      "warm",
+      "crunchy"
+    ],
+    "meal_types": [
+      "lunch",
+      "snack",
+      "late night"
+    ],
+    "dietary_restrictions": [
+      "vegetarian"
+    ],
+    "nutrition": {
+      "calories": 350,
+      "protein": 12,
+      "carbs": 30,
+      "fat": 20
+    },
+    "preparation_time": 10,
+    "popularity_score": 4.7
+  },
+  {
+    "food_id": 52,
+    "name": "Pizza Bagel",
+    "description": "Bagel topped with tomato sauce, cheese, and toppings",
+    "cuisine": "American",
+    "taste_profile": [
+      "savory",
+      "cheesy",
+      "tangy"
+    ],
+    "moods": [
+      "nostalgic",
+      "comforted",
+      "happy"
+    ],
+    "cravings": [
+      "savory",
+      "cheesy",
+      "quick"
+    ],
+    "meal_types": [
+      "snack",
+      "late night"
+    ],
+    "dietary_restrictions": [
+      "vegetarian"
+    ],
+    "nutrition": {
+      "calories": 320,
+      "protein": 15,
+      "carbs": 40,
+      "fat": 12
+    },
+    "preparation_time": 15,
+    "popularity_score": 4.4
+  },
+  {
+    "food_id": 53,
+    "name": "Feijoada",
+    "description": "Brazilian black bean stew with pork and beef",
+    "cuisine": "Brazilian",
+    "taste_profile": [
+      "savory",
+      "rich",
+      "hearty"
+    ],
+    "moods": [
+      "satisfied",
+      "social",
+      "adventurous"
+    ],
+    "cravings": [
+      "savory",
+      "hearty",
+      "rich"
+    ],
+    "meal_types": [
+      "lunch",
+      "dinner"
+    ],
+    "dietary_restrictions": [],
+    "nutrition": {
+      "calories": 650,
+      "protein": 35,
+      "carbs": 60,
+      "fat": 28
+    },
+    "preparation_time": 180,
+    "popularity_score": 4.7
+  },
+  {
+    "food_id": 54,
+    "name": "A\u00e7a\u00ed Bowl",
+    "description": "Smoothie bowl made with a\u00e7a\u00ed berries, topped with granola, fruit, and other toppings",
+    "cuisine": "Brazilian",
+    "taste_profile": [
+      "sweet",
+      "fruity",
+      "refreshing"
+    ],
+    "moods": [
+      "energetic",
+      "health-conscious",
+      "refreshed"
+    ],
+    "cravings": [
+      "sweet",
+      "refreshing",
+      "healthy"
+    ],
+    "meal_types": [
+      "breakfast",
+      "snack"
+    ],
+    "dietary_restrictions": [
+      "vegetarian",
+      "vegan"
+    ],
+    "nutrition": {
+      "calories": 350,
+      "protein": 8,
+      "carbs": 70,
+      "fat": 5
+    },
+    "preparation_time": 15,
+    "popularity_score": 4.6
+  },
+  {
+    "food_id": 55,
+    "name": "Pumpkin Soup",
+    "description": "Creamy soup made from pumpkin puree and warming spices",
+    "cuisine": "American",
+    "taste_profile": [
+      "savory",
+      "creamy",
+      "spiced"
+    ],
+    "moods": [
+      "cozy",
+      "cold",
+      "comforted"
+    ],
+    "cravings": [
+      "warm",
+      "comforting",
+      "seasonal"
+    ],
+    "meal_types": [
+      "lunch",
+      "dinner",
+      "appetizer"
+    ],
+    "dietary_restrictions": [
+      "vegetarian",
+      "gluten-free"
+    ],
+    "nutrition": {
+      "calories": 180,
+      "protein": 5,
+      "carbs": 30,
+      "fat": 6
+    },
+    "preparation_time": 35,
+    "popularity_score": 4.5
+  },
+  {
+    "food_id": 56,
+    "name": "Watermelon",
+    "description": "Refreshing summer fruit with sweet, juicy flesh",
+    "cuisine": "Fruit",
+    "taste_profile": [
+      "sweet",
+      "juicy",
+      "refreshing"
+    ],
+    "moods": [
+      "hot",
+      "refreshed",
+      "happy"
+    ],
+    "cravings": [
+      "sweet",
+      "refreshing",
+      "juicy"
+    ],
+    "meal_types": [
+      "snack",
+      "dessert"
+    ],
+    "dietary_restrictions": [
+      "vegetarian",
+      "vegan",
+      "gluten-free",
+      "dairy-free"
+    ],
+    "nutrition": {
+      "calories": 85,
+      "protein": 1,
+      "carbs": 21,
+      "fat": 0
+    },
+    "preparation_time": 5,
+    "popularity_score": 4.7
+  },
+  {
+    "food_id": 57,
+    "name": "Hot Chocolate",
+    "description": "Rich, warm beverage made with melted chocolate and milk",
+    "cuisine": "Beverages",
+    "taste_profile": [
+      "sweet",
+      "rich",
+      "warm"
+    ],
+    "moods": [
+      "cold",
+      "comforted",
+      "cozy"
+    ],
+    "cravings": [
+      "sweet",
+      "warm",
+      "comforting"
+    ],
+    "meal_types": [
+      "beverage",
+      "dessert"
+    ],
+    "dietary_restrictions": [
+      "vegetarian"
+    ],
+    "nutrition": {
+      "calories": 250,
+      "protein": 8,
+      "carbs": 30,
+      "fat": 10
+    },
+    "preparation_time": 10,
+    "popularity_score": 4.8
+  },
+  {
+    "food_id": 58,
+    "name": "Gazpacho",
+    "description": "Chilled Spanish soup made with raw, blended vegetables",
+    "cuisine": "Spanish",
+    "taste_profile": [
+      "savory",
+      "tangy",
+      "refreshing"
+    ],
+    "moods": [
+      "hot",
+      "refreshed",
+      "health-conscious"
+    ],
+    "cravings": [
+      "cold",
+      "fresh",
+      "light"
+    ],
+    "meal_types": [
+      "appetizer",
+      "lunch"
+    ],
+    "dietary_restrictions": [
+      "vegetarian",
+      "vegan",
+      "gluten-free"
+    ],
+    "nutrition": {
+      "calories": 120,
+      "protein": 3,
+      "carbs": 20,
+      "fat": 4
+    },
+    "preparation_time": 30,
+    "popularity_score": 4.3
+  },
+  {
+    "food_id": 59,
+    "name": "Breakfast Burrito",
+    "description": "Tortilla filled with eggs, cheese, beans, and sometimes meat",
+    "cuisine": "Mexican-American",
+    "taste_profile": [
+      "savory",
+      "filling",
+      "spicy"
+    ],
+    "moods": [
+      "hangover",
+      "hungry",
+      "tired"
+    ],
+    "cravings": [
+      "savory",
+      "hearty",
+      "spicy"
+    ],
+    "meal_types": [
+      "breakfast",
+      "brunch",
+      "late night"
+    ],
+    "dietary_restrictions": [],
+    "nutrition": {
+      "calories": 550,
+      "protein": 25,
+      "carbs": 50,
+      "fat": 28
+    },
+    "preparation_time": 20,
+    "popularity_score": 4.7
+  },
+  {
+    "food_id": 60,
+    "name": "Coconut Water",
+    "description": "Natural electrolyte-rich water from young coconuts",
+    "cuisine": "Beverages",
+    "taste_profile": [
+      "sweet",
+      "refreshing",
+      "nutty"
+    ],
+    "moods": [
+      "hangover",
+      "dehydrated",
+      "tired"
+    ],
+    "cravings": [
+      "refreshing",
+      "hydrating",
+      "light"
+    ],
+    "meal_types": [
+      "beverage"
+    ],
+    "dietary_restrictions": [
+      "vegetarian",
+      "vegan",
+      "gluten-free",
+      "dairy-free"
+    ],
+    "nutrition": {
+      "calories": 45,
+      "protein": 2,
+      "carbs": 9,
+      "fat": 0
+    },
+    "preparation_time": 0,
+    "popularity_score": 4.4
+  },
+  {
+    "food_id": 61,
+    "name": "Tuna Sashimi",
+    "description": "Thinly sliced raw tuna served without rice",
+    "cuisine": "Japanese",
+    "taste_profile": ["savory", "umami"],
+    "moods": ["relaxed", "anxious"],
+    "cravings": ["light", "proteiny"],
+    "meal_types": ["appetizer", "snack"],
+    "dietary_restrictions": [],
+    "nutrition": {
+      "calories": 127,
+      "protein": 20.5,
+      "carbs": 0,
+      "fat": 4.4
+    },
+    "preparation_time": 5,
+    "popularity_score": 4.3
+  },
+  {
+    "food_id": 62,
+    "name": "Cucumber Roll",
+    "description": "Simple maki roll with cucumber and rice",
+    "cuisine": "Japanese",
+    "taste_profile": ["savory", "umami"],
+    "moods": ["relaxed", "tired"],
+    "cravings": ["refreshing"],
+    "meal_types": ["appetizer", "lunch"],
+    "dietary_restrictions": ["vegan", "gluten-free", "vegetarian"],
+    "nutrition": {
+      "calories": 78,
+      "protein": 4,
+      "carbs": 5,
+      "fat": 5
+    },
+    "preparation_time": 8,
+    "popularity_score": 3.8
+  },
+    {
+    "food_id": 63,
+    "name": "Chicken Katsu",
+    "description": "Breaded deep‑fried chicken cutlet with rice or salad",
+    "cuisine": "Japanese",
+    "taste_profile": ["crispy", "savory"],
+    "moods": ["sad", "happy"],
+    "cravings": ["hearty", "indulgent"],
+    "meal_types": ["lunch", "dinner"],
+    "dietary_restrictions": ["gluten"],
+    "nutrition": {
+      "calories": 910,
+      "protein": 64,
+      "carbs": 56,
+      "fat": 48
+    },
+    "preparation_time": 45,
+    "popularity_score": 4.3
+  },
+  {
+    "food_id": 64,
+    "name": "Nasi Goreng",
+    "description": "Indonesian fried rice with sweet soy sauce, egg, vegetables, and meat or shrimp",
+    "cuisine": "Indonesian",
+    "taste_profile": ["savory", "sweet", "umami"],
+    "moods": ["happy", "relaxed"],
+    "cravings": ["comfort food", "hearty"],
+    "meal_types": ["breakfast", "lunch", "dinner"],
+    "dietary_restrictions": ["gluten"],
+    "nutrition": {
+      "calories": 494,
+      "protein": 38,
+      "carbs": 63,
+      "fat": 10
+    },
+    "preparation_time": 30,
+    "popularity_score": 4.7
+  },
+  {
+    "food_id": 65,
+    "name": "Gado Gado",
+    "description": "Mixed boiled vegetables, tofu, tempeh, egg and lontong topped with peanut sauce",
+    "cuisine": "Indonesian",
+    "taste_profile": ["savory", "sweet", "umami"],
+    "moods": ["relaxed", "happy"],
+    "cravings": ["healthy", "comfort food"],
+    "meal_types": ["lunch", "dinner"],
+    "dietary_restrictions": ["vegetarian"],
+    "nutrition": {
+      "calories": 318,
+      "protein": 17,
+      "carbs": 26,
+      "fat": 18
+    },
+    "preparation_time": 20,
+    "popularity_score": 4.5
+  },
+  {
+    "food_id": 66,
+    "name": "Satay Ayam",
+    "description": "Grilled chicken skewers served with peanut sauce",
+    "cuisine": "Indonesian",
+    "taste_profile": ["savory", "sweet", "umami"],
+    "moods": ["happy", "energetic"],
+    "cravings": ["hearty", "indulgent"],
+    "meal_types": ["appetizer", "snack", "dinner"],
+    "dietary_restrictions": [],
+    "nutrition": {
+      "calories": 260,
+      "protein": 20,
+      "carbs": 8,
+      "fat": 18
+    },
+    "preparation_time": 25,
+    "popularity_score": 4.6
+  },
+  {
+    "food_id": 67,
+    "name": "Soto Ayam",
+    "description": "Aromatic chicken soup with turmeric, vermicelli, cabbage, and boiled egg",
+    "cuisine": "Indonesian",
+    "taste_profile": ["savory", "umami"],
+    "moods": ["tired", "relaxed"],
+    "cravings": ["comfort food", "light"],
+    "meal_types": ["breakfast", "lunch"],
+    "dietary_restrictions": [],
+    "nutrition": {
+      "calories": 180,
+      "protein": 15,
+      "carbs": 10,
+      "fat": 10
+    },
+    "preparation_time": 45,
+    "popularity_score": 4.4
+  },
+  {
+    "food_id": 68,
+    "name": "Rendang",
+    "description": "Spicy slow-cooked beef in rich coconut and spice paste",
+    "cuisine": "Indonesian",
+    "taste_profile": ["spicy", "savory", "umami"],
+    "moods": ["nostalgic", "happy"],
+    "cravings": ["hearty", "indulgent"],
+    "meal_types": ["lunch", "dinner"],
+    "dietary_restrictions": ["gluten-free"],
+    "nutrition": {
+      "calories": 600,
+      "protein": 30,
+      "carbs": 8,
+      "fat": 45
+    },
+    "preparation_time": 180,
+    "popularity_score": 4.8
+  },
+  {
+    "food_id": 69,
+    "name": "Mie Goreng",
+    "description": "Stir-fried egg noodles with vegetables, egg, and choice of meat",
+    "cuisine": "Indonesian",
+    "taste_profile": ["savory", "sweet"],
+    "moods": ["energetic", "bored"],
+    "cravings": ["comfort food", "quick & easy"],
+    "meal_types": ["lunch", "dinner"],
+    "dietary_restrictions": [],
+    "nutrition": {
+      "calories": 400,
+      "protein": 8,
+      "carbs": 53,
+      "fat": 18
+    },
+    "preparation_time": 20,
+    "popularity_score": 4.4
+  },
+  {
+    "food_id": 70,
+    "name": "Bakso",
+    "description": "Meatball soup, typically beef, with broth, noodles, and vegetables",
+    "cuisine": "Indonesian",
+    "taste_profile": ["savory", "umami"],
+    "moods": ["nostalgic", "happy"],
+    "cravings": ["comfort food", "hearty"],
+    "meal_types": ["lunch", "dinner", "snack"],
+    "dietary_restrictions": [],
+    "nutrition": {
+      "calories": 350,
+      "protein": 25,
+      "carbs": 20,
+      "fat": 18
+    },
+    "preparation_time": 30,
+    "popularity_score": 4.3
+  },
+  {
+    "food_id": 71,
+    "name": "Pempek Palembang",
+    "description": "Fish and tapioca cake deep-fried, served with sweet sour vinegar dip",
+    "cuisine": "Indonesian",
+    "taste_profile": ["savory", "sour"],
+    "moods": ["bored", "happy"],
+    "cravings": ["quick & easy", "light"],
+    "meal_types": ["snack", "appetizer"],
+    "dietary_restrictions": [],
+    "nutrition": {
+      "calories": 300,
+      "protein": 15,
+      "carbs": 25,
+      "fat": 15
+    },
+    "preparation_time": 40,
+    "popularity_score": 4.2
+  },
+  {
+    "food_id": 72,
+    "name": "Sate Lilit",
+    "description": "Minced fish satay wrapped around lemongrass stick, grilled",
+    "cuisine": "Indonesian",
+    "taste_profile": ["savory", "umami"],
+    "moods": ["romantic", "happy"],
+    "cravings": ["light", "healthy"],
+    "meal_types": ["appetizer", "snack"],
+    "dietary_restrictions": [],
+    "nutrition": {
+      "calories": 200,
+      "protein": 18,
+      "carbs": 5,
+      "fat": 12
+    },
+    "preparation_time": 30,
+    "popularity_score": 4.5
+  },
+  {
+    "food_id": 73,
+    "name": "Es Campur",
+    "description": "Mixed shaved ice dessert with fruits, jelly, condensed milk, and syrup",
+    "cuisine": "Indonesian",
+    "taste_profile": ["sweet"],
+    "moods": ["happy", "relaxed"],
+    "cravings": ["refreshing", "indulgent"],
+    "meal_types": ["dessert", "snack"],
+    "dietary_restrictions": ["vegetarian"],
+    "nutrition": {
+      "calories": 250,
+      "protein": 3,
+      "carbs": 50,
+      "fat": 5
+    },
+    "preparation_time": 10,
+    "popularity_score": 4.1
+  }
+
+]
