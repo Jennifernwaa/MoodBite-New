@@ -55,7 +55,7 @@ export const MoodBiteProvider = ({ children }) => {
     const fetchFoodData = async () => {
       try {
         setIsLoading(true);
-        const response = await fetch('/data/moodbite_food_dataset.json');
+        const response = await fetch('/database/moodbite_food_dataset.json');
         if (!response.ok) {
           throw new Error('Failed to load food data');
         }

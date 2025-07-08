@@ -4,9 +4,11 @@ const cors = require('cors');
 const helmet = require('helmet');
 const rateLimit = require('express-rate-limit');
 const { Pool } = require('pg');
-const { port, database } = require('pg/lib/defaults.js');
-
+const cookieParser = require('cookie-parser');
 const app = express();
+app.use(cookieParser());
+
+
 const PORT = process.env.PORT || 5000;
 // TO do: Make login/sign up and dashoard later
 // Database connection
@@ -29,18 +31,18 @@ pool.connect((err, client, release) => {
     }
 });
 
-
 // Middleware
 app.use(helmet());
 app.use(cors({
-    origin: process.env.FRONTEND_URL || '*', // Allow all origins by default
+    origin: 'http://localhost:5173', // Allow all origins by default
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // Allow specific HTTP methods
-    allowedHeaders: ['Content-Type', 'Authorization'], // Allow specific headers
+    allowedHeaders: ['Content-Type', 'Authorization', 'token'], // Allow specific headers
     credentials: true, // Allow credentials (cookies, authorization headers, etc.)
     optionsSuccessStatus: 204 // For legacy browser support
 }));
 app.use(express.json({ limit: '10mb' })); // Limit JSON body size to 10mb
 app.use(express.urlencoded({ extended: true})); // Limit
+app.use(cookieParser());
 
 
 // Rate limiting
@@ -49,6 +51,10 @@ const limiter = rateLimit({
     max: 100, // Limit each IP to 100 requests per windowMs
 });
 app.use(limiter)
+
+// Routes
+app.use("/auth", require("./routes/userAuth"));
+app.use('/api/orders', require('./routes/order'));
 
 
 // Basic routes

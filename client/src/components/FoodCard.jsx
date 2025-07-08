@@ -1,40 +1,47 @@
 import React, { useState, useEffect } from 'react';
 import { generateFoodExplanation } from '../utils/recommendationEngine';
 
-function FoodCard({ food }) {
+function FoodCard({ food, onOrder }) {
   const [expanded, setExpanded] = useState(false);
   const [imageUrl, setImageUrl] = useState('');
   
   // I use Unsplash images since the json data doesn't have image_url field
-  useEffect(() => {
-    const fetchImage = async () => {
-      const accessKey = "VTeptAU-ucyeK5gdoOjXfdh1NlIEAWoxlJi0jcx9b24";
-      try {
-        const res = await fetch(
-          `https://api.unsplash.com/search/photos?query=${encodeURIComponent(food.name + ' food')}`,
-          {
-            headers: {
-              Authorization: `Client-ID ${accessKey}`,
-            },
-          }
-        );
-        const data = await res.json();
-        if (data.results && data.results.length > 0) {
-          setImageUrl(data.results[0].urls.small);
-        } else {
-          setImageUrl('https://via.placeholder.com/400x300?text=No+Image');
-        }
-      } catch (err) {
-        console.error('Error fetching image:', err);
-        setImageUrl('https://via.placeholder.com/400x300?text=Error');
-      }
-    };
+  // useEffect(() => {
+  //   const fetchImage = async () => {
+  //     const accessKey = "VTeptAU-ucyeK5gdoOjXfdh1NlIEAWoxlJi0jcx9b24";
+  //     try {
+  //       const res = await fetch(
+  //         `https://api.unsplash.com/search/photos?query=${encodeURIComponent(food.name + ' food')}`,
+  //         {
+  //           headers: {
+  //             Authorization: `Client-ID ${accessKey}`,
+  //           },
+  //         }
+  //       );
+  //       const data = await res.json();
+  //       if (data.results && data.results.length > 0) {
+  //         setImageUrl(data.results[0].urls.small);
+  //       } else {
+  //         setImageUrl('https://via.placeholder.com/400x300?text=No+Image');
+  //       }
+  //     } catch (err) {
+  //       console.error('Error fetching image:', err);
+  //       setImageUrl('https://via.placeholder.com/400x300?text=Error');
+  //     }
+  //   };
 
-    fetchImage();
-  }, [food.name]);
+  //   fetchImage();
+  // }, [food.name]);
 
   // Toggle expanded state
   const toggleExpanded = () => setExpanded(!expanded);
+
+  // Handle order button click
+  const handleOrderClick = () => {
+    if (onOrder) {
+      onOrder(food); // Pass the entire food object to the onOrder handler
+    }
+  };
   
   return (
     <div 
@@ -150,8 +157,16 @@ function FoodCard({ food }) {
             className="bg-amber-500 hover:bg-amber-600 text-white py-1 px-3 rounded-full text-sm transition-colors"
           >
             <i className="fas fa-heart mr-1"></i>
-            Save
+            Like
           </button>
+          <button
+            onClick={handleOrderClick}
+            className="bg-amber-500 hover:bg-amber-600 text-white py-1 px-3 rounded-full text-sm transition-colors"
+          >
+            <i className="fa-solid fa-cart-shopping mr-1"></i>
+            Order
+          </button>
+
         </div>
       </div>
     </div>

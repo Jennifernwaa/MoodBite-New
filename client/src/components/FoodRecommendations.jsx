@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useMoodBite } from '../context/MoodBiteContext';
+import OrderModal from './OrderModal';
 import FoodCard from './FoodCard';
 import { Button, Card, LoadingSpinner } from './UI/index';
 
@@ -14,6 +15,8 @@ function FoodRecommendations({ onBack, onReset }) {
   } = useMoodBite();
   
   const [showFilters, setShowFilters] = useState(false);
+  const [isOrderModalOpen, setIsOrderModalOpen] = useState(false);
+  const [selectedFoodForOrder, setSelectedFoodForOrder] = useState(null);
   const [filters, setFilters] = useState({
     cuisine: '',
     dietary: {
@@ -22,6 +25,18 @@ function FoodRecommendations({ onBack, onReset }) {
       glutenFree: false
     }
   });
+
+  // Handler to open the order modal
+  const handleOpenOrderModal = (food) => {
+    setSelectedFoodForOrder(food);
+    setIsOrderModalOpen(true);
+  };
+
+  // Handler to close the order modal
+  const handleCloseOrderModal = () => {
+    setIsOrderModalOpen(false);
+    setSelectedFoodForOrder(null); // Clear selected food data
+  };
   
   const [filteredRecommendations, setFilteredRecommendations] = useState([]);
   
@@ -196,7 +211,10 @@ function FoodRecommendations({ onBack, onReset }) {
             {filteredRecommendations.length > 0 ? (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {filteredRecommendations.map(food => (
-                  <FoodCard key={food.food_id} food={food} />
+                  <FoodCard 
+                  key={food.food_id} 
+                  food={food} 
+                  onOrder={handleOpenOrderModal}/>
                 ))}
               </div>
             ) : (
@@ -226,6 +244,13 @@ function FoodRecommendations({ onBack, onReset }) {
                 Start Over
               </Button>
             </div>
+            {/* Render the Order Modal if open */}
+              {isOrderModalOpen && selectedFoodForOrder && (
+                <OrderModal
+                  food={selectedFoodForOrder}
+                  onClose={handleCloseOrderModal}
+                />
+              )}
           </>
         )}
       </Card>
