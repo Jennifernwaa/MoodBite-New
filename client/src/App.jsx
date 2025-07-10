@@ -18,7 +18,7 @@ function ProtectedApp() {
 
   const handleLogout = async () => {
     try {
-      await fetch('http://localhost:5000/auth/logout', {
+      await fetch('http://localhost:8080/auth/logout', {
         method: 'POST',
         credentials: 'include', // Important for cookies
       });
@@ -31,6 +31,8 @@ function ProtectedApp() {
       alert('Logout failed');
     }
   };
+  console.log(window.paypal);
+
 
   return (
     <MoodBiteProvider>

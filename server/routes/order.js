@@ -4,7 +4,7 @@ const authorization = require('../middleware/authorization');
 
 router.post('/', authorization, async (req, res) => {
   try {
-    const user_id = req.user.id; // from token
+    const user_id = req.user.id; 
     const {
       food_name,
       quantity,
@@ -14,13 +14,15 @@ router.post('/', authorization, async (req, res) => {
       tax,
       total_amount,
       restaurant_id,
+      paypal_order_id,
+      paypal_payer_id,
       delivery_address
     } = req.body;
 
     const orderResult = await pool.query(
-      `INSERT INTO orders (user_id, restaurant_id, subtotal, delivery_fee, tax, total_amount, status, payment_status, delivery_address, ordered_at)
-       VALUES ($1, $2, $3, $4, $5, $6, 'Pending', 'Unpaid', $7, NOW()) RETURNING *`,
-      [user_id, restaurant_id, subtotal, delivery_fee, tax, total_amount, delivery_address]
+      `INSERT INTO orders (user_id, restaurant_id, subtotal, delivery_fee, tax, total_amount, status, payment_status, paypal_order_id, paypal_payer_id, delivery_address, ordered_at)
+       VALUES ($1, $2, $3, $4, $5, $6, 'Pending', 'Paid', $7, $8, $9, NOW()) RETURNING *`,
+      [user_id, restaurant_id, subtotal, delivery_fee, tax, total_amount, paypal_order_id, paypal_payer_id, delivery_address]
     );
 
     const order_id = orderResult.rows[0].order_id;

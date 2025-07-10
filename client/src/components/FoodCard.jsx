@@ -6,32 +6,32 @@ function FoodCard({ food, onOrder }) {
   const [imageUrl, setImageUrl] = useState('');
   
   // I use Unsplash images since the json data doesn't have image_url field
-  // useEffect(() => {
-  //   const fetchImage = async () => {
-  //     const accessKey = "VTeptAU-ucyeK5gdoOjXfdh1NlIEAWoxlJi0jcx9b24";
-  //     try {
-  //       const res = await fetch(
-  //         `https://api.unsplash.com/search/photos?query=${encodeURIComponent(food.name + ' food')}`,
-  //         {
-  //           headers: {
-  //             Authorization: `Client-ID ${accessKey}`,
-  //           },
-  //         }
-  //       );
-  //       const data = await res.json();
-  //       if (data.results && data.results.length > 0) {
-  //         setImageUrl(data.results[0].urls.small);
-  //       } else {
-  //         setImageUrl('https://via.placeholder.com/400x300?text=No+Image');
-  //       }
-  //     } catch (err) {
-  //       console.error('Error fetching image:', err);
-  //       setImageUrl('https://via.placeholder.com/400x300?text=Error');
-  //     }
-  //   };
+  useEffect(() => {
+    const fetchImage = async () => {
+      const accessKey = "VTeptAU-ucyeK5gdoOjXfdh1NlIEAWoxlJi0jcx9b24";
+      try {
+        const res = await fetch(
+          `https://api.unsplash.com/search/photos?query=${encodeURIComponent(food.name + ' food')}`,
+          {
+            headers: {
+              Authorization: `Client-ID ${accessKey}`,
+            },
+          }
+        );
+        const data = await res.json();
+        if (data.results && data.results.length > 0) {
+          setImageUrl(data.results[0].urls.small);
+        } else {
+          setImageUrl('https://via.placeholder.com/400x300?text=No+Image');
+        }
+      } catch (err) {
+        console.error('Error fetching image:', err);
+        setImageUrl('https://via.placeholder.com/400x300?text=Error');
+      }
+    };
 
-  //   fetchImage();
-  // }, [food.name]);
+    fetchImage();
+  }, [food.name]);
 
   // Toggle expanded state
   const toggleExpanded = () => setExpanded(!expanded);
@@ -39,7 +39,7 @@ function FoodCard({ food, onOrder }) {
   // Handle order button click
   const handleOrderClick = () => {
     if (onOrder) {
-      onOrder(food); // Pass the entire food object to the onOrder handler
+      onOrder({...food, imageUrl}); // Pass the entire food object and pic url to the onOrder handler
     }
   };
   

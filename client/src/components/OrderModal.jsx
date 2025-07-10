@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { PayPalButtons } from '@paypal/react-paypal-js';
 
-// A simple utility to format currency
+
 const formatCurrency = (amount) => {
   return new Intl.NumberFormat('en-US', {
     style: 'currency',
-    currency: 'USD', // Adjust currency as needed (e.g., 'IDR' for Indonesian Rupiah)
+    currency: 'USD',
     minimumFractionDigits: 2,
     maximumFractionDigits: 2,
   }).format(amount);
@@ -16,91 +17,33 @@ function OrderModal({ food, onClose }) {
   const [orderPlaced, setOrderPlaced] = useState(false);
   const [deliveryStatus, setDeliveryStatus] = useState('Pending Confirmation');
   const [paymentStatus, setPaymentStatus] = useState('Unpaid');
+  const [restaurant, setRestaurant] = useState(null);
 
-  // --- Mock Data (Replace with real data/API calls) ---
-  const unitPrice = food.price || 15.00; // Use food.price if available, otherwise a default
-  const restaurantName = food.restaurant_name || 'MoodBite Kitchen'; // Assuming food has a restaurant_name
-  const deliveryFee = 5.00;
-  const taxRate = 0.10; // 10% tax
+  const [unitPrice] = useState(() => parseFloat((Math.random() * (18 - 3) + 3).toFixed(2)));
+  const restaurantName = restaurant?.name || 'MoodBite Kitchen';
+  const deliveryFee = 5.0;
+  const taxRate = 0.1;
 
-  // Calculate totals
   const itemTotalPrice = quantity * unitPrice;
   const subtotal = itemTotalPrice;
   const taxAmount = subtotal * taxRate;
   const totalAmount = subtotal + deliveryFee + taxAmount;
 
-    // Order process
-    const handlePlaceOrder = async () => {
-    if (!deliveryAddress) {
-        alert('Please enter a delivery address.');
-        return;
-    }
-
-    setOrderPlaced(false); // Reset in case of re-attempt
-    setPaymentStatus('Processing Payment'); // Set processing state early
-    setDeliveryStatus('Pending Confirmation'); // Reset delivery status
-
-    try {
-        const token = localStorage.getItem('token');
-        if (!token) {
-        alert('You must be logged in to place an order.');
-        // Optionally redirect to login or handle unauthenticated state
-        return;
-        }
-
-        const response = await fetch('http://localhost:5000/api/orders', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${token}`,
-        },
-        body: JSON.stringify({
-            food_name: food.name,
-            quantity,
-            unit_price: unitPrice,
-            delivery_fee: deliveryFee,
-            tax: taxAmount,
-            subtotal,
-            total_amount: totalAmount,
-            restaurant_id: food.restaurant_id,
-            delivery_address: deliveryAddress,
-        }),
-        });
-
-        const data = await response.json();
-
-        if (response.ok) {
-        setOrderPlaced(true); // Now truly placed
-        setPaymentStatus('Paid'); // Only if backend confirms payment
-        setDeliveryStatus('Preparing Order'); // Only if backend confirms order initiation
-
-        // You can then use WebSockets or polling to update delivery status
-        // For now, if you want client-side simulation AFTER successful order:
-        // Simulate delivery process (only if order was successful)
-        setTimeout(() => {
-            setDeliveryStatus('Out for Delivery');
-        }, 5000); // 5 seconds later
-
-        setTimeout(() => {
-            setDeliveryStatus('Delivered');
-        }, 10000); // 10 seconds later
-
-        } else {
-        // If response is NOT ok, revert or show error
-        setOrderPlaced(false);
-        setPaymentStatus('Failed'); // Indicate payment failure
-        alert(data.error || `Failed to place order: ${response.statusText}`);
-        }
-    } catch (err) {
-        console.error('Order failed:', err);
-        setOrderPlaced(false);
-        setPaymentStatus('Failed'); // Indicate payment failure
-        alert('An error occurred while placing the order. Please check console for details.');
-    }
+  // Fetches restaurant based on the food user pick, this is based on cuisine column
+  useEffect(() => {
+    if (!food?.cuisine) return;
+    const fetchRestaurant = async () => {
+      try {
+        const res = await fetch(`http://localhost:8080/api/restaurants?cuisine=${encodeURIComponent(food.cuisine)}`);
+        const data = await res.json();
+        if (data.length > 0) setRestaurant(data[0]);
+      } catch (err) {
+        console.error('Error fetching restaurant:', err);
+      }
     };
+    fetchRestaurant();
+  }, [food]);
 
-
-  // Prevent scrolling when the modal is open
   useEffect(() => {
     document.body.style.overflow = 'hidden';
     return () => {
@@ -108,12 +51,13 @@ function OrderModal({ food, onClose }) {
     };
   }, []);
 
-  if (!food) return null; // Don't render if no food data is passed
+
+  if (!food) return null;
 
   return (
+    // --- Start of Modal --- 
     <div className="fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center z-50">
       <div className="bg-white rounded-lg shadow-xl p-6 w-full max-w-md mx-auto relative overflow-y-auto max-h-[90vh]">
-        {/* Close Button */}
         <button
           onClick={onClose}
           className="absolute top-3 right-3 text-gray-500 hover:text-gray-800 text-xl"
@@ -137,18 +81,14 @@ function OrderModal({ food, onClose }) {
           </div>
         </div>
 
-        {/* Quantity Selector */}
+        {/* Quantity Part */}
         <div className="mb-4">
-          <label htmlFor="quantity" className="block text-gray-700 text-sm font-bold mb-2">
-            Quantity:
-          </label>
+          <label htmlFor="quantity" className="block text-gray-700 text-sm font-bold mb-2">Quantity:</label>
           <div className="flex items-center">
-            <button
-              onClick={() => setQuantity(prev => Math.max(1, prev - 1))}
-              className="bg-gray-200 text-gray-700 px-3 py-1 rounded-l-md hover:bg-gray-300"
-            >
-              -
-            </button>
+            <button 
+            onClick={() => setQuantity((prev) => Math.max(1, prev - 1))} 
+            className="bg-gray-200 text-gray-700 px-3 py-1 rounded-l-md hover:bg-gray-300"
+            disabled={orderPlaced}>-</button>
             <input
               type="number"
               id="quantity"
@@ -156,17 +96,16 @@ function OrderModal({ food, onClose }) {
               onChange={(e) => setQuantity(Math.max(1, parseInt(e.target.value) || 1))}
               className="w-20 text-center border-t border-b border-gray-300 py-1"
               min="1"
+              disabled={orderPlaced}
             />
-            <button
-              onClick={() => setQuantity(prev => prev + 1)}
-              className="bg-gray-200 text-gray-700 px-3 py-1 rounded-r-md hover:bg-gray-300"
-            >
-              +
-            </button>
+            <button 
+            onClick={() => setQuantity((prev) => prev + 1)} 
+            className="bg-gray-200 text-gray-700 px-3 py-1 rounded-r-md hover:bg-gray-300"
+            disabled={orderPlaced}>+</button>
           </div>
         </div>
 
-        {/* Price Breakdown */}
+        {/* Order Details */}
         <div className="mb-4 border-t pt-4">
           <div className="flex justify-between text-gray-700 mb-2">
             <span>Item Total ({quantity}x {food.name}):</span>
@@ -190,11 +129,10 @@ function OrderModal({ food, onClose }) {
           </div>
         </div>
 
-        {/* Delivery Address Input */}
+
+        {/* Delivery Address Text Area */}
         <div className="mb-4">
-          <label htmlFor="deliveryAddress" className="block text-gray-700 text-sm font-bold mb-2">
-            Delivery Address:
-          </label>
+          <label htmlFor="deliveryAddress" className="block text-gray-700 text-sm font-bold mb-2">Delivery Address:</label>
           <input
             type="text"
             id="deliveryAddress"
@@ -202,53 +140,91 @@ function OrderModal({ food, onClose }) {
             onChange={(e) => setDeliveryAddress(e.target.value)}
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             placeholder="Enter your delivery address"
-            disabled={orderPlaced} // Disable input after order is placed
+            disabled={orderPlaced}
           />
         </div>
 
-        {/* Order & Payment Status */}
+
+        {/* Transaction & Delivery Details later when user paid */}
         {orderPlaced && (
           <div className="mt-4 p-4 bg-amber-50 rounded-md">
             <h4 className="text-lg font-semibold text-gray-800 mb-2">Order Status:</h4>
-            <p className="text-gray-700">
-              <span className="font-medium">Delivery Status:</span> {deliveryStatus}
-            </p>
-            <p className="text-gray-700">
-              <span className="font-medium">Payment Status:</span> {paymentStatus}
-            </p>
-            {deliveryStatus === 'Delivered' && (
-              <p className="text-green-600 font-bold mt-2">Enjoy your MoodBite!</p>
-            )}
+            <p className="text-gray-700"><span className="font-medium">Delivery Status:</span> {deliveryStatus}</p>
+            <p className="text-gray-700"><span className="font-medium">Payment Status:</span> {paymentStatus}</p>
+            {deliveryStatus === 'Delivered' && <p className="text-green-600 font-bold mt-2">Enjoy your MoodBite!</p>}
           </div>
         )}
+        
 
-        {/* Action Buttons */}
-        <div className="mt-6 flex justify-end gap-3">
+        {/* SPECIAL PAYPAL SECTION FOR PAYPAL BUTTONS  */}
+        <div className="paypal-button-container overflow-visible mt-4">
           {!orderPlaced ? (
-            <>
-              <button
-                onClick={onClose}
-                className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-full transition-colors"
-              >
-                Cancel
-              </button>
-              <button
-                onClick={handlePlaceOrder}
-                className="bg-amber-500 hover:bg-amber-600 text-white font-bold py-2 px-4 rounded-full transition-colors"
-                disabled={!deliveryAddress || quantity < 1} // Disable if no address or quantity is invalid
-              >
-                Place Order
-              </button>
-            </>
+            <PayPalButtons
+              style={{ shape: 'rect', layout: 'vertical', color: 'gold', label: 'paypal' }}
+              disabled={!deliveryAddress || quantity < 1}
+              createOrder={(data, actions) => {
+                return actions.order.create({
+                  purchase_units: [
+                    {
+                      amount: { value: totalAmount.toFixed(2) },
+                    },
+                  ],
+                });
+              }}
+              onApprove={async (data, actions) => {
+                const details = await actions.order.capture();
+                // console.log('Transaction approved:', details);
+                setPaymentStatus('Paid');
+                setDeliveryStatus('Preparing Order');
+
+                try {
+                  const token = localStorage.getItem('token');
+                  const response = await fetch('http://localhost:8080/api/orders', {
+                    method: 'POST',
+                    headers: {
+                      'Content-Type': 'application/json',
+                      Authorization: `Bearer ${token}`,
+                    },
+                    body: JSON.stringify({
+                      food_name: food.name,
+                      quantity,
+                      unit_price: unitPrice,
+                      delivery_fee: deliveryFee,
+                      tax: taxAmount,
+                      subtotal,
+                      paypal_order_id: details.id,
+                      paypal_payer_id: details.purchase_units[0].payee.merchant_id,
+                      total_amount: totalAmount,
+                      restaurant_id: restaurant?.restaurant_id || null,
+                      delivery_address: deliveryAddress,
+                    }),
+                  });
+
+                  if (response.ok) {
+                    setOrderPlaced(true);
+                    setTimeout(() => setDeliveryStatus('Out for Delivery'), 5000);
+                    setTimeout(() => setDeliveryStatus('Delivered'), 10000);
+                  } else {
+                    const err = await response.json();
+                    console.error('Save order failed', err);
+                    alert('Order placed, Database failure.');
+                  }
+                } catch (err) {
+                  console.error('Order DB error:', err);
+                  alert('Internal Error. Please try again.');
+                }
+              }}
+              onCancel={() => alert('Payment was cancelled.')}
+              onError={(err) => {
+                console.error('PayPal error:', err);
+                alert('There was an issue with the PayPal transaction.');
+              }}
+            />
           ) : (
-            <button
-              onClick={onClose}
-              className="bg-amber-500 hover:bg-amber-600 text-white font-bold py-2 px-4 rounded-full transition-colors"
-            >
-              Close
-            </button>
+            <button onClick={onClose} className="bg-amber-500 hover:bg-amber-600 text-white font-bold py-2 px-4 rounded-full transition-colors">Close</button>
           )}
         </div>
+
       </div>
     </div>
   );
